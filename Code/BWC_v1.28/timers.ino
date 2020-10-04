@@ -66,6 +66,9 @@ void minuteTimer() {
     if (h == myConfig.filteroffhour) {
       filterOffFlag = true;
     }
+    if (myConfig.filteroffhour == myConfig.filteronhour) {
+      filterOnFlag = true;
+    }
 
   }
 
