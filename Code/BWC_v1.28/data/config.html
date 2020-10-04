@@ -85,18 +85,18 @@
 			</table>
 		</div>
 		<div>
-			<label for="timezone">Timezone</label>
+			<label for="timezone">Timezone: GMT + </label>
 			<input type="text" id="timezone" value="2">
 		</div>
 		<div>
-			<label for="price">Price per kWh</label>
+			<label for="price">Price per kWh &#163;</label>
 			<input type="text" id="price" value="1.50">
 		</div>
 		<div>
 			<label for="audio">Audio</label>
 			<input type="checkbox" id="audio" style="background-color:#999">
 		</div>
-		<div id="time">last boot: </div>
+		<div id="time">ESP Last Boot: </div>
  		<div><button id="save" class="button" style="background-color:#DDD" onclick="saveconfig()">Save config</button></div>
 		<div><a href="/mqtt.html"> MQTT cfg </div>
 	</center>
@@ -138,7 +138,7 @@ function loadconfig(){
 		  for(var i = 0; i<24; i++){
 			document.getElementById("h"+i.toString()).checked = msgobj.heaterhours[i];
 		  }
-		  document.getElementById("time").innerHTML = "last boot: " + msgobj.rb;
+		  document.getElementById("time").innerHTML = "ESP Last Boot: " + msgobj.rb;
 		}
 	}
 }

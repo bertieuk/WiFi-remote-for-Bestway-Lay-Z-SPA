@@ -23,7 +23,7 @@ connection.onmessage = function (e) {
 	document.getElementById('ttlabel').innerHTML = msgobj.target.toString();
 	
 	if(msgobj.locked){
-		mycolor = "background-color:#"+"900";
+		mycolor = "background-color:#"+"F00";
 	}  else {
 		mycolor = "background-color:#"+"000";
 	}
@@ -44,7 +44,7 @@ connection.onmessage = function (e) {
 	}  else {
 		mycolor = "background-color:#"+"000";
 	}
-	if(msgobj.heating) mycolor = "background-color:#"+"900";
+	if(msgobj.heating) mycolor = "background-color:#"+"F00";
 	document.getElementById('heater').style = mycolor;
 	
 	document.getElementById('filter').style = "background-color:#0"+msgobj.filter*9+"0";
@@ -70,7 +70,7 @@ connection.onmessage = function (e) {
 	
 	document.getElementById('filtertime').innerHTML = 'Acc. Filter time: '+s2dhms(msgobj.filtertime);
 	
-	document.getElementById('cost').innerHTML = 'Est. acc. cost: '+(msgobj.cost).toFixed(2);
+	document.getElementById('cost').innerHTML = 'Est. acc. cost: &#163;'+(msgobj.cost).toFixed(2);
 	
 	document.getElementById('auto').checked = msgobj.auto;
 	
