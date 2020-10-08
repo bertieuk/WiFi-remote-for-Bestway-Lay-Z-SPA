@@ -137,10 +137,20 @@ function automode() {
 }
 
 function reboot() {
-	connection.send('0');
+	var proceed = confirm("Are you sure you want to proceed?");
+	if (proceed) {
+		connection.send('0');
+		} else {
+	  	//don't proceed
+	}
 }
 
 function zero() {
+	var proceed = confirm("Are you sure you want to proceed?");
+	if (proceed) {
 	connection.send('3');
+		} else {
+	  	//don't proceed
+	}
 }
 
